@@ -47,3 +47,5 @@ module.exports = {
     extensions: [".js", ".css", ".ts"] // for regnition of css in js 
   },
 };
+
+//npm install concurrently --save-dev cuncurently for watchink code for example watch ts and bundle

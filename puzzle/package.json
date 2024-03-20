@@ -1,17 +1,19 @@
 {
   "name": "puzzle",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "watch": "cross-env NODE_ENV=development webpack --watch --config webpack.config.js"
+    "dev-build": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "prod-build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "watch:tsc": "tsc --watch",
+    "watch:build":"cross-env NODE_ENV=development webpack --watch --config webpack.config.js",
+    "dev": "concurrently \"npm:watch:*\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.10.0",
     "html-loader": "^5.0.0",
@@ -22,5 +24,6 @@
     "typescript": "^5.4.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "description": ""
 }
