@@ -1,4 +1,4 @@
-"use strict";
+import { Page } from "./compnents/page/page.js";
 class Test {
     constructor(el, atribute) {
         this.el = el;

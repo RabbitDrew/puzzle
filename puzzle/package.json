@@ -4,10 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:start": "webpack serve --open",
     "dev-build": "cross-env NODE_ENV=development webpack --config webpack.config.js",
     "prod-build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "watch:tsc": "tsc --watch",
-    "watch:build":"cross-env NODE_ENV=development webpack --watch --config webpack.config.js",
+    "watch:build": "cross-env NODE_ENV=development webpack --watch --config webpack.config.js",
+    "watch:sass": "sass --watch ./src",
     "dev": "concurrently \"npm:watch:*\""
   },
   "author": "",
@@ -19,11 +21,14 @@
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.8.1",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.2",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   },
   "description": ""
 }
