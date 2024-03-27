@@ -1,0 +1,74 @@
+.start-intro {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.start-intro .intro-title {
+  font-size: 48px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  color: #cdcdcd;
+  text-transform: uppercase;
+  text-align: center;
+}
+.start-intro .intro-subtitle {
+  font-size: 15px;
+  font-weight: 200;
+  color: #cdcdcd;
+  text-align: center;
+}
+.start-intro .intro-subtitle .subtitle-capital__letter {
+  text-transform: capitalize;
+}
+.start-intro .intro-btn {
+  padding: 10px 50px;
+  background-color: #570071;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+.start-intro .intro-btn .btn-title {
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #ececec;
+  text-transform: capitalize;
+}
+.start-intro .start-btn:hover {
+  opacity: 1;
+}
+
+.start-close--open {
+  display: none;
+}
+
+.start-hide-anim {
+  animation: hideIntro 2s ease;
+}
+
+@keyframes hideIntro {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+.start-open-anim {
+  animation: openIntro 2s ease;
+}
+
+@keyframes openIntro {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=intro_start.css.map */

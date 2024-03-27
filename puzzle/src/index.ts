@@ -1,10 +1,7 @@
-import { Page } from "./compnents/page/page.js";
-class Test {
-    constructor (public el:string, public atribute:string) {
-        this.el
-        this.atribute
-    }
-}
-
-const test: string = "test"
-console.log(test);
+//page structure
+import Page from "./compnents/page/body/page";
+import Intro from "./compnents/page/intro/intro";
+import "./compnents/page/intro_start/intro_start"
+import "./compnents/page/intro_entry/intro_entry"
+import introIsEnabled from "./compnents/login_out/enabled_intro";
+import "./compnents/login_out/switch-elements"
