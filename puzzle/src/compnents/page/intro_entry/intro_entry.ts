@@ -9,8 +9,8 @@ createStartEntry.startIntro()
 let createEntryInputs = new Entry ("div","entry-inputs")
 createEntryInputs.createInnerEntry()
 let creatInputs = new Entry ("input","entry-input")
-creatInputs.inputs()
-
+creatInputs.inputs("lable", 
+                   "inputs-label")//p=as value for creating inputs 
 let createEntryBtn = new Entry ('div', "entry-btn")
 createEntryBtn.createInnerEntry()
 

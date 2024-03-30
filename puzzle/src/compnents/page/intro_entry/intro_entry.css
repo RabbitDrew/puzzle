@@ -26,13 +26,64 @@
   font-size: 18px;
   color: #cdcdcd;
   opacity: 0.8;
-  text-transform: capitalize;
 }
 .start-entry .entry-inputs .entry-input::placeholder {
   font-size: 18px;
   color: #cdcdcd;
   opacity: 0.7;
   text-transform: capitalize;
+}
+.start-entry .entry-inputs .valid-err {
+  animation: error 2s ease;
+}
+@keyframes error {
+  0% {
+    border-bottom: 1px solid #cdcdcd;
+  }
+  50% {
+    border-bottom: 1px solid #ff0000;
+  }
+  100% {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+.start-entry .entry-inputs .entry-input::placeholder {
+  font-size: 18px;
+  color: #cdcdcd;
+  opacity: 0.7;
+  visibility: hidden;
+}
+.start-entry .entry-inputs .inputs-label {
+  font-size: 18px;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  color: #cdcdcd;
+  text-transform: capitalize;
+  position: relative;
+  bottom: 30%;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+.start-entry .entry-inputs .entry-input:focus + .inputs-label {
+  transform: translateY(-100%); /* Move label up */
+}
+.start-entry .entry-inputs .entry-input:not(:placeholder-shown) + .inputs-label {
+  transform: translateY(-100%); /* Move label up */
+}
+.start-entry .entry-inputs .valid-err__lable {
+  animation: errorLable 2s ease;
+}
+@keyframes errorLable {
+  0% {
+    color: #cdcdcd;
+  }
+  50% {
+    color: #ff0000;
+  }
+  100% {
+    color: #cdcdcd;
+  }
 }
 .start-entry .entry-btn {
   width: fit-content;

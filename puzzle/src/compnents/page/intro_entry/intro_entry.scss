@@ -30,15 +30,75 @@
             font-size: 18px;
             color: #cdcdcd;
             opacity: 0.8;
-            text-transform: capitalize;
         }
+
         .entry-input::placeholder {
             font-size: 18px;
             color: #cdcdcd;
             opacity: 0.7;
             text-transform: capitalize;
         }
+        
+        .valid-err {
+            animation: error 2s ease;
+        }
 
+        @keyframes error {
+         0% {
+            border-bottom: 1px solid #cdcdcd;
+         }
+         50% {
+            border-bottom: 1px solid #ff0000;
+         }
+         100% {
+            border-bottom: 1px solid #cdcdcd;
+         }
+        }
+        //placeholder disabled
+           .entry-input::placeholder {
+            font-size: 18px;
+            color: #cdcdcd;
+            opacity: 0.7;
+            visibility: hidden;
+        }
+        //custom placeholder
+        .inputs-label {
+            font-size: 18px;
+            font-weight: 100;
+            font-family: 'Montserrat', sans-serif;
+            color: #cdcdcd;
+            text-transform: capitalize;
+            position:relative;
+            bottom: 30%;
+
+            opacity: 0.7;
+            transition: all .2s ease;
+            pointer-events: none; // activ input field by pushing on input
+
+        }
+        
+        .entry-input:focus + .inputs-label {
+            transform: translateY(-100%); /* Move label up */
+        }
+      
+        .entry-input:not(:placeholder-shown) + .inputs-label {
+            transform: translateY(-100%); /* Move label up */
+        }
+        .valid-err__lable {
+            animation: errorLable 2s ease;
+        }
+
+        @keyframes errorLable {
+         0% {
+            color: #cdcdcd;
+         }
+         50% {
+            color: #ff0000;
+         }
+         100% {
+            color: #cdcdcd;
+         }
+        }
         
     }
 

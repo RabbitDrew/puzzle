@@ -8,6 +8,15 @@ export const getElement = (className) => {
         return element;
     }
 };
+export const getNodeListOfElements = (className) => {
+    const elements = document.querySelectorAll(`.${className}`);
+    if (!elements) {
+        throw console.error("the element is undefined");
+    }
+    else {
+        return elements;
+    }
+};
 export const getElementFromNodeList = (className, index) => {
     const elements = document.querySelectorAll(`.${className}`);
     /*return needed el from node list make arr from node list then apply method

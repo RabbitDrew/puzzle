@@ -5,4 +5,5 @@ import "./compnents/page/intro_start/intro_start";
 import "./compnents/page/intro_entry/intro_entry";
 import introIsEnabled from "./compnents/login_out/enabled_intro";
 import "./compnents/login_out/switch-elements";
+import "./compnents/login_out/validation";
 //# sourceMappingURL=index.js.map

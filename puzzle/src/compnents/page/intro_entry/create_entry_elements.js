@@ -21,7 +21,7 @@ export default class Entry {
         }
         this.getStartEntry.appendChild(createEl);
     }
-    inputs() {
+    inputs(lableTag, lableClass) {
         const attributesArr = ["name", "surname"];
         const getEntryInputs = document.querySelector(".entry-inputs");
         for (let i = 0; i < 2; i++) {
@@ -29,6 +29,12 @@ export default class Entry {
             createInputs.setAttribute("placeholder", attributesArr[i]);
             createInputs.classList.add(this.className);
             getEntryInputs.appendChild(createInputs);
+            // lable add attributes and classes 
+            const createLabel = document.createElement(lableTag);
+            createLabel.setAttribute("for", this.className); //pass class of input to attche the lable to the input
+            createLabel.classList.add(lableClass); //have two classe add right class to the right lable and additional class for highelight error
+            createLabel.textContent = attributesArr[i]; //add texto into the lable according attribute of input 
+            getEntryInputs.appendChild(createLabel);
         }
     }
     btn() {
