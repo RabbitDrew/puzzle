@@ -5,7 +5,7 @@ createStartEntry.startIntro();
 let createEntryInputs = new Entry("div", "entry-inputs");
 createEntryInputs.createInnerEntry();
 let creatInputs = new Entry("input", "entry-input");
-creatInputs.inputs("lable", "inputs-label"); //p=as value for creating inputs 
+creatInputs.inputs("lable", "inputs-label"); //pass value for creating inputs 
 let createEntryBtn = new Entry('div', "entry-btn");
 createEntryBtn.createInnerEntry();
 let createBtnLog = new Entry("div", "btn-log");

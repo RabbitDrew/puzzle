@@ -22,13 +22,12 @@ export default class Entry{
         }
         this.getStartEntry.appendChild(createEl)
     }
-
     inputs(lableTag:string,
            lableClass:string,
            ):void {
-      const attributesArr:string[] = ["name", "surname"]
+      const attributesArr:string[] = ["name", "surname", "email"]
       const getEntryInputs = document.querySelector(".entry-inputs") as HTMLElement
-      for (let i = 0; i < 2; i++) { 
+      for (let i = 0; i < 3; i++) { 
         const createInputs:HTMLElement = document.createElement(this.tag) 
         createInputs.setAttribute("placeholder", attributesArr[i]);
         createInputs.classList.add(this.className)

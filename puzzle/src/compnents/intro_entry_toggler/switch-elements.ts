@@ -1,6 +1,6 @@
 import Toggler from "./Toggler";
-import { getElement } from "./get-elements";
-import { getElementFromNodeList } from "./get-elements";
+import { getElement } from "../get_html_elements/get-elements";
+import { getElementFromNodeList } from "../get_html_elements/get-elements";
 //get elements
 const getIntro = getElement("start-intro")
 const getEntry = getElement("start-entry")
