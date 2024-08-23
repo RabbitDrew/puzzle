@@ -6,10 +6,10 @@ export default class Intro {
         this.attribute
     }
 createPageContainer () {
-    const getPage = document.querySelector(".page") as HTMLElement
+    const getPage = document.querySelector<HTMLElement>(".page") 
     const createPageCOntainer:HTMLElement = document.createElement(this.tag)
     createPageCOntainer.classList.add(this.attribute)
-    getPage.appendChild(createPageCOntainer)
+    getPage?.appendChild(createPageCOntainer)
     }
 createPageStart () {
     const getPageContainer = document.querySelector(".page-container") as HTMLElement
@@ -22,3 +22,6 @@ let pageContainer = new Intro ("div", "page-container")
     pageContainer.createPageContainer()
 let pageStart = new Intro ("div", "page-start")
     pageStart.createPageStart()
+
+
+    // createPage container rename method 

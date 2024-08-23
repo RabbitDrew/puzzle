@@ -11,7 +11,7 @@ export default class Intro {
         const getPage = document.querySelector(".page");
         const createPageCOntainer = document.createElement(this.tag);
         createPageCOntainer.classList.add(this.attribute);
-        getPage.appendChild(createPageCOntainer);
+        getPage === null || getPage === void 0 ? void 0 : getPage.appendChild(createPageCOntainer);
     }
     createPageStart() {
         const getPageContainer = document.querySelector(".page-container");
@@ -24,4 +24,5 @@ let pageContainer = new Intro("div", "page-container");
 pageContainer.createPageContainer();
 let pageStart = new Intro("div", "page-start");
 pageStart.createPageStart();
+// createPage container rename method 
 //# sourceMappingURL=intro.js.map
